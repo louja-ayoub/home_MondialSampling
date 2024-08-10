@@ -11,7 +11,7 @@ const Footer = () => (
                         </a>
                     </div>
                     <ul className="space-y-4">
-                        <NavLink name="Cryptocurrency" url="#" />
+                        <NavLink name="Mondial-sampling" url="#" />
                         <NavLink name="Exchanges" url="#" />
                         <NavLink name="Watchlist" url="#" />
                     </ul>
@@ -30,21 +30,21 @@ const Footer = () => (
                     </ul>
                 </div>
                 <div className="md:w-full md:border-t lg:w-full sm:px-10 py-6 sm:py-12 w-full sm:w-1/2 xl:w-[22rem] space-y-4 sm:border-t border-[#DDDDDD]">
-                    <h5 className="text-sm font-medium text-[#666666] focus:outline-none focus:shadow-outline">Newsletter</h5>
+                    <h5 className="text-sm font-medium text-[#666666] focus:outline-none focus:shadow-outline"> Company </h5>
                     <p className="text-sm text-[#666666] focus:outline-none focus:shadow-outline">
-                        Never miss anything crypto when <br className="sm:hidden" />you're on the go
+                        Mining & Aggregates
                     </p>
                     <div className="flex items-center space-x-2">
-                        <p className='text-xl'> Email:</p>
+                        <p className='text-md'> Email:</p>
                         <a href="mailto:contact@nixod.com">
-                            <h1 className='text-xl w-fit border-b-2 my-2'> contact@nixod.com </h1>
+                            <h1 className='text-md w-fit border-b-2 my-2'> Info@mondial-sampling.com </h1>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
         <div className="py-8 sm:py-4 text-center text-md text-[#666666] hover:text-gray-900">
-            &copy; Copyright {new Date().getFullYear()} Nixod. All rights reserved
+            &copy; Copyright {new Date().getFullYear()} mondial-sampling. All rights reserved
         </div>
     </footer>
 );
