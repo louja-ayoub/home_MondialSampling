@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ess_mondial from "../img/partners/ess_mondial.png"
 
-const PartnerImage = () => {
+const Partners = () => {
     const [brands, setBrands] = useState([
         { name: 'Ess Mondial', imageUrl: ess_mondial },
         { name: 'Brand 2', imageUrl: ess_mondial },
@@ -21,4 +21,4 @@ const PartnerImage = () => {
     );
 };
 
-export default PartnerImage;
+export default Partners;

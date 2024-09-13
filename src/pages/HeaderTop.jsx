@@ -5,9 +5,10 @@ import { FaLinkedin, FaTwitter, FaPinterestP, FaPhone } from 'react-icons/fa';
 
 const HeaderTop = () => {
     return (
-        <div className="bg-[#102C57] text-white py-2">
-            <div className="container flex justify-around items-center ">
-                <ul className="flex space-x-4">
+        <div className="bg-[#102C57] text-white py-2 lg:px-16">
+            <div className="container mx-auto px-4 flex flex-col md:flex-row md:justify-between items-center space-y-2 md:space-y-0">
+                {/* Email and Location Section */}
+                <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
                     <li>
                         <a href="mailto:info@homeverse.com" className="flex items-center space-x-2">
                             <FiMail className="text-lg" />
@@ -17,13 +18,15 @@ const HeaderTop = () => {
                     <li>
                         <a href="#" className="flex items-center space-x-2">
                             <GoLocation className="text-sm" />
-                            <address className="not-italic"> Hambourg, Germany </address>
+                            <address className="not-italic">Hambourg, Germany</address>
                         </a>
                     </li>
                 </ul>
-                <ul className="flex space-x-4 justify-end items-center">
+
+                {/* Social Media Icons Section */}
+                <ul className="flex space-x-4">
                     <li>
-                        <a href="#" className="hover:text-teal-400">
+                        <a href="https://www.linkedin.com/company/104098661" className="hover:text-teal-400">
                             <FaLinkedin className="text-lg" />
                         </a>
                     </li>
@@ -38,6 +41,8 @@ const HeaderTop = () => {
                         </a>
                     </li>
                 </ul>
+
+                {/* Phone Number Section */}
                 <ul>
                     <li>
                         <a href="#" className="hover:text-teal-400 flex items-center gap-2">
@@ -46,7 +51,6 @@ const HeaderTop = () => {
                         </a>
                     </li>
                 </ul>
-
             </div>
         </div>
     );

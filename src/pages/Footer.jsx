@@ -1,50 +1,55 @@
 import React from 'react';
-import logo from '../img/logo.png'
+import logo from '../img/logo.png';
+import { GoArrowUpRight } from "react-icons/go";
+
 const Footer = () => (
     <footer className="max-w-screen-xl px-8 mx-auto mt-10">
-        <div className="w-full border-y border-[#DDDDDD]">
-            <div className="grid xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
-                <div className="md:w-full lg:w-full w-full sm:w-1/2 xl:w-fit flex flex-col sm:flex-row sm:px-6 py-6 sm:py-12 sm:space-x-10 sm:border-r-0 border-[#DDDDDD]">
-                    <div className="sm:hidden xl:block mb-6 sm:mb-0">
-                        <a href="#">
-                            <img src={logo} className="w-24 -mt-2" alt="Nefa Logo" />
-                        </a>
-                    </div>
-                    <ul className="space-y-4">
-                        <NavLink name="Mondial-sampling" url="#" />
-                        <NavLink name="Exchanges" url="#" />
-                        <NavLink name="Watchlist" url="#" />
+        <div className="w-full border-t border-b border-gray-200 py-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+                {/* Logo and Navigation */}
+                <div className="flex flex-col items-start">
+                    <ul className="space-y-2">
+                        <NavLink name="Mondial Sampling" url="/about" />
+                        <NavLink name="Contact" url="/contact" />
+                        <NavLink name="Products" url="/products" />
+                        <NavLink name="Sampling" url="/sampling" />
+                        <NavLink name="Home" url="/" />
                     </ul>
+                    <a href="#" className="my-4">
+                        <img src={logo} className="w-16" alt="Nefa Logo" />
+                    </a>
                 </div>
-                <div className="md:w-full lg:w-full lg:border-r w-full sm:w-1/2 xl:w-fit sm:px-16 py-6 sm:py-12 border-t sm:border-t xl:border-r border-[#DDDDDD]">
-                    <ul className="space-y-4">
-                        <NavLink name="Products" url="#" />
-                        <NavLink name="About Us" url="#" />
-                        <NavLink name="Careers" url="#" />
-                    </ul>
-                </div>
-                <div className="md:w-full md:border-t lg:w-full w-full sm:w-1/2 xl:w-fit sm:px-16 py-6 sm:py-12 border-t sm:border-t-0 sm:border-r-0 border-[#DDDDDD]">
-                    <ul className="space-y-4">
-                        <NavLink name="Help Center" url="#" />
-                        <NavLink name="Contact Us" url="#" />
-                    </ul>
-                </div>
-                <div className="md:w-full md:border-t lg:w-full sm:px-10 py-6 sm:py-12 w-full sm:w-1/2 xl:w-[22rem] space-y-4 sm:border-t border-[#DDDDDD]">
-                    <h5 className="text-sm font-medium text-[#666666] focus:outline-none focus:shadow-outline"> Company </h5>
-                    <p className="text-sm text-[#666666] focus:outline-none focus:shadow-outline">
-                        Mining & Aggregates
+                {/* Contact Info */}
+                <div className="flex flex-col">
+                    <h5 className="text-lg font-extrabold mb-4">Contact</h5>
+                    <p className="text-sm mb-4">
+                        Mondial Sampling GmbH
+                        <br />
+                        An der Alster 6, D-20099 Hamburg, Germany
+                        <br />
+                        +49 1525 850 52 64
                     </p>
-                    <div className="flex items-center space-x-2">
-                        <p className='text-md'> Email:</p>
-                        <a href="mailto:contact@nixod.com">
-                            <h1 className='text-md w-fit border-b-2 my-2'> Info@mondial-sampling.com </h1>
-                        </a>
-                    </div>
+                    <a href="mailto:info@mondial-sampling.com" className="text-teal-500 hover:underline">
+                        info@mondial-sampling.com
+                    </a>
+                </div>
+
+                {/* Contact Us Button */}
+                <div className="flex items-center lg:order-2">
+                    <a href="/contact"
+                        className="text-white bg-[#45cde9] hover:bg-[#47d8f6] focus:ring-1 
+                  rounded-full text-sm px-4 lg:px-5 py-2 lg:py-2 sm:mr-2 lg:mr-0 
+                 dark:bg-[#47d8f6] dark:hover:bg-[#47d8f6] focus:outline-none flex items-center">
+                        <span className='text-xl'> Contact us </span>
+                        <GoArrowUpRight className='ml-1 text-2xl' />
+                    </a>
                 </div>
             </div>
         </div>
-        <div className="py-8 sm:py-4 text-center text-md text-[#666666] hover:text-gray-900">
-            &copy; Copyright {new Date().getFullYear()} mondial-sampling. All rights reserved
+
+        {/* Copyright Section */}
+        <div className="py-6 text-center text-sm text-gray-500">
+            &copy; {new Date().getFullYear()} Mondial Sampling. All rights reserved.
         </div>
     </footer>
 );
@@ -53,9 +58,11 @@ export default Footer;
 
 const NavLink = ({ name, url }) => (
     <li>
-        <a href={url} className="text-[#666666] hover:text-teal-500 focus:outline-none focus:shadow-outline">
+        <a
+            href={url}
+            className="text-gray-600 hover:text-teal-500 focus:outline-none focus:shadow-outline transition-colors duration-300"
+        >
             {name}
         </a>
     </li>
 );
-

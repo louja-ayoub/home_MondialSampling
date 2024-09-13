@@ -12,8 +12,9 @@ export default function MechanicalReliabilitySection() {
 
                 {/* Text Section */}
                 <div className="flex flex-col justify-center">
-                    <h2 className="text-2xl font-bold mb-4">Mechanical reliability</h2>
+                    <h2 className="text-3xl font-bold mb-4">Benefits of Mondial Sampling Systems:</h2>
                     <ul className="space-y-4 text-lg text-gray-700">
+                        <li>Mechanical reliability.</li>
                         <li>Calculate the correct amount or value for each batch of material you receive or deliver.</li>
                         <li>Confirm that you receive or sell products which meet contract requirements.</li>
                         <li>Monitor and optimize your production and quality control process.</li>
