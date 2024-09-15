@@ -90,11 +90,11 @@ const products = [
 
 
     {
-        name: 'Hammermills Screener',
-        code: 'BELT SCALE MODEL 1014',
+        name: 'Drum-Drive/Tails',
+        code: 'DRUM DRIVE AND TAILS',
         imageUrl: productImg7,
         categorie: 'Belt scales, Weight Material',
-        description: "The Dynascale belt scale model 1014 is easy to install, indoors or outdoors, on stationary or mobile belts and is customised to your applications. Its robust construction makes it suitable for the most difficult applications on a wide variety of applications. The Dynascale 1014 belt scale has an OIML certificate according to the EEC directive, class 2, 1 and 0.5.",
+        description: "The INGEPROA ID with UPN profile, provides constant product flow, chassis robustness and minimum maintenance.Drum or counter-drum motor or return. Possibilities of tubes from diameters D160mm. to D600mm. and calibrated shafts up to D250mm. Hot vulcanized by autoclave with different materials on demand; food grade rubber, natural rubber, polyurethane, etc…",
         id: 7
 
     },

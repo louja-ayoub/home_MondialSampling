@@ -42,7 +42,7 @@ export default function Header() {
                 ))}
               </ul>
               <div className="flex items-center sm:ml-0 mt-2 lg:ml-16 lg:mt-0">
-                <a href="#"
+                <a href="/contact"
                   className="text-white bg-[#45cde9] hover:bg-[#47d8f6] focus:ring-1 
                         rounded-full text-sm px-4 lg:px-5 py-2 lg:py-2 sm:mr-2 lg:mr-0 
                       dark:bg-[#47d8f6] dark:hover:bg-[#47d8f6] focus:outline-none flex items-center">
