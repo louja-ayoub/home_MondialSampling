@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../img/logo.png';
 import { GoArrowUpRight } from "react-icons/go";
+import { Link } from 'react-router-dom';
 
 const Footer = () => (
     <footer className="max-w-screen-xl px-8 mx-auto mt-10">
@@ -14,6 +15,7 @@ const Footer = () => (
                         <NavLink name="Products" url="/products" />
                         <NavLink name="Sampling" url="/sampling" />
                         <NavLink name="Home" url="/" />
+                        <NavLink name="Privacy & Policies" url="/privacyPolicy" />
                     </ul>
                     <a href="#" className="my-4">
                         <img src={logo} className="w-16" alt="Nefa Logo" />
@@ -58,11 +60,11 @@ export default Footer;
 
 const NavLink = ({ name, url }) => (
     <li>
-        <a
-            href={url}
+        <Link
+            to={url}
             className="text-gray-600 hover:text-teal-500 focus:outline-none focus:shadow-outline transition-colors duration-300"
         >
             {name}
-        </a>
+        </Link>
     </li>
 );

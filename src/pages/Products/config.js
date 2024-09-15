@@ -6,6 +6,11 @@ import productImg5 from '../../img/products_img/product-5.jpg'
 import productImg6 from '../../img/products_img/product-6.jpg'
 import productImg7 from '../../img/products_img/product-7.jpg'
 import productImg8 from '../../img/products_img/product-8.jpg'
+import productImg9 from '../../img/products_img/product-9.jpg'
+import productImg10 from '../../img/products_img/product-10.jpg'
+import productImg11 from '../../img/products_img/product-11.jpg'
+import productImg12 from '../../img/products_img/product-12.jpg'
+
 
 
 
@@ -109,9 +114,47 @@ const products = [
 
     },
 
+    {
+        name: 'Backstops and Freewheels',
+        code: 'backstops freewheels',
+        imageUrl: productImg9, // Replace with the appropriate image URL
+        category: 'backstops freewheels',
+        description: "Backstops and freewheels for ensuring one-way security and preventing reverse motion. Suitable for all types of reducers. Available in various types and forms. Renowned brands include Stieber, Ringspan, and Tsubaki.",
+        id: 14
+    },
+
+
+    {
+        name: 'Gear Reducer',
+        code: 'gear reducer',
+        imageUrl: productImg10,
+        category: 'gear reducers',
+        description: "Gear reducers with constant and variable speeds, available in different executions. A wide range of power options and sizes to meet various application needs.",
+        id: 10
+    },
+
+    {
+        name: 'Bearing Pedestal',
+        code: 'bearing pedestal',
+        imageUrl: productImg11,
+        category: 'bearing pedestals',
+        description: "Bearing pedestal for guiding rollers, available in a wide range of sizes. Options include cast or welded designs, with manufacturing according to model or drawing.",
+        id: 11
+    },
+
+    {
+        name: 'hydraulic cylinders',
+        code: 'hydraulic cylinders',
+        imageUrl: productImg12,
+        categorie: 'hydraulic cylinders',
+        description: "Our hydraulic cylinders come in a variety of sizes and stroke lengths to suit your needs. We offer a comprehensive selection of eye bolts and other suspension components, ensuring versatility and adaptability in various applications. These cylinders are available in both single and double-acting configurations. Additionally, they can be equipped with stroke sensors and position indicators for precise monitoring and control.",
+        id: 12
+
+    },
+
+
 
 
 ]
-
 
 export default products;

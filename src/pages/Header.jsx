@@ -22,7 +22,7 @@ export default function Header() {
           <Link to="/" className="flex items-center">
             <div className="flex items-center justify-between">
               <img src={logo} alt="Logo" className="w-36" />
-              <h1 className="text-2xl font-bold" translate='false'> Mondial Sampling </h1>
+              <h1 className="text-2xl font-bold" translate='false'> Mondial Sampling Gmbh</h1>
             </div>
           </Link>
 

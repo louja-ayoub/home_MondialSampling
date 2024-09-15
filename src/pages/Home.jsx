@@ -10,7 +10,7 @@ import products from './Products/config';
 import SamplingPage from './SamplingPage';
 import About from './About';
 import Contact from './Contact'
-
+import PrivacyPolicy from './PrivacyPolicy'
 
 
 export default function Home() {
@@ -26,6 +26,7 @@ export default function Home() {
                         <Route path="/sampling" element={<SamplingPage />} />
                         <Route path="/about" element={<About />} />
                         <Route path="/contact" element={<Contact />} />
+                        <Route path="/privacyPolicy" element={< PrivacyPolicy />} />
                         <Route path="/productDetail/:id" element={<ProductDetail products={products} />} />
                     </Routes>
                 </Suspense>
