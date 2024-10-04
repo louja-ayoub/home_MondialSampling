@@ -1,51 +1,43 @@
-import { useDispatch } from 'react-redux';
-import { Form, Select } from 'antd';
+import { Form, Select } from "antd";
 import useLanguage from '../locale/useLanguage';
 import { translateAction } from '../redux/translate/actions';
-import { countryList } from '../utils/countryList';
+import { useDispatch, useSelector } from "react-redux";
+import languages from '../utils/languages';
+import { selectLangCode } from "../redux/translate/selectors";
 
 const Lang = () => {
     const translate = useLanguage();
     const dispatch = useDispatch();
-    return (
-        <div>
-            <Form.Item
-                label={translate('language')}
-                name="idurar_app_language"
-                rules={[
-                    {
-                        required: true,
-                    },
-                ]}
-            >
-                <Select
-                    showSearch
-                    placeholder={translate('select language')}
-                    optionFilterProp="children"
-                    filterOption={(input, option) =>
-                        (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
-                    }
-                    filterSort={(optionA, optionB) =>
-                        (optionA?.label ?? '').toLowerCase().startsWith((optionB?.label ?? '').toLowerCase())
-                    }
-                    onSelect={(value) => {
-                        dispatch(translateAction.translate(value));
-                    }}
-                >
+    const langCode = useSelector(selectLangCode)
 
-                    {countryList.map((language) => (
-                        <Select.Option
-                            key={language.value}
-                            value={language.value}
-                            label={translate(language.label)}
-                        >
-                            {language?.icon && language?.icon + ' '}
-                            {translate(language.label)}
-                        </Select.Option>
-                    ))}
-                </Select>
-            </Form.Item>
-        </div>
-    );
+    return (<Select
+        showSearch
+        className="min-w-32 w-full"
+        placeholder={translate('select_language')}
+        optionFilterProp="children"
+        filterOption={(input, option) =>
+            (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
+        }
+        filterSort={(optionA, optionB) =>
+            (optionA?.label ?? '').toLowerCase().startsWith((optionB?.label ?? '').toLowerCase())
+        }
+        onSelect={(value) => {
+            dispatch(translateAction.translate(value));
+        }}
+
+        value={langCode}
+    >
+        {languages.map((language) => (
+            <Select.Option key={language.value} value={language.value} label={language.label}>
+                <div className="flex gap-1 font-semibold">
+                    <span role="img" aria-label={language.label}>
+                        {language.icon}
+                    </span>
+                    {translate(language.label.toLowerCase())}
+                </div>
+            </Select.Option>
+        ))}
+    </Select>)
 }
+
 export default Lang;

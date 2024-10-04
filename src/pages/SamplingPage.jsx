@@ -1,6 +1,9 @@
 import React from 'react';
+import useLanguage from '../locale/useLanguage';
 
 function SamplingPage() {
+    const translate = useLanguage();
+
     return (
         <div className="min-h-screen bg-gray-100 py-16 px-4">
             <div className="container mx-auto max-w-5xl">
@@ -12,19 +15,19 @@ function SamplingPage() {
                 {/* Description */}
                 <div className="bg-white p-8 shadow-lg rounded-lg">
                     <p className="text-lg text-gray-700 mb-6">
-                        From individual pieces of equipment through to turnkey systems, we provide sampling systems to be incorporated into plants handling particulate solids or slurries. Furthermore, at <strong>Mondial Sampling</strong> we take the time to understand your process and offer the best possible solution rooted in sampling standards and experience-driven best practices related to material handling.
+                        {translate('equipment_description')}
                     </p>
                     <p className="text-lg text-gray-700 mb-6">
-                        The importance of collecting correct and representative samples that packages the optimum blend of sampling fit for your site and application needs.
+                        {translate('importance_of_samples')}
                     </p>
 
                     {/* Subheading */}
                     <h2 className="text-2xl font-semibold text-teal-600 mt-8 mb-4">
-                        Sampling in Mining & Aggregates Industry
+                        {translate('sampling_mining_aggregates')}
                     </h2>
 
                     <p className="text-lg text-gray-700">
-                        We provide industry-specific solutions tailored to the challenges faced in the mining and aggregates industry, ensuring representative sampling that aligns with the demands of your operation. Our sampling systems are designed to meet the toughest requirements for accuracy and consistency.
+                        {translate('mining_industry_description')}
                     </p>
                 </div>
             </div>

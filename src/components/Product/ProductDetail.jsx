@@ -1,8 +1,14 @@
 import { Link, useParams } from "react-router-dom";
+import useLanguage from "../../locale/useLanguage";
+import { selectLangCode } from "../../redux/translate/selectors";
+import { useSelector } from "react-redux";
+
+
 
 const ProductDetail = ({ products }) => {
 
-
+    const translate = useLanguage();
+    const langCode = useSelector(selectLangCode)
     const { id } = useParams();
     const product = products.find(p => p.id === parseInt(id));
     const changeImage = (src) => {
@@ -27,7 +33,7 @@ const ProductDetail = ({ products }) => {
                     <div className="w-full md:w-1/2 px-4">
                         <h2 className="text-3xl font-bold mb-2"> {product.code} </h2>
                         <p className="text-gray-600 mb-4"> {product.name} </p>
-                        <p className="text-gray-600 mb-4"> <strong> Categories: </strong> {product.categorie} </p>
+                        <p className="text-gray-600 mb-4"> <strong> {translate('categories')}:</strong> {product.category} </p>
                         {/* <div className="mb-4">
                             <span className="text-2xl font-bold mr-2">$349.99</span>
                             <span className="text-gray-500 line-through">$399.99</span>
@@ -43,11 +49,11 @@ const ProductDetail = ({ products }) => {
                                         clipRule="evenodd" />
                                 </svg>
                             ))}
-                            <span className="ml-2 text-gray-600">4.5 (120 reviews)</span>
+                            <span className="ml-2 text-gray-600">4.5 (120 {translate('reviews')}) </span>
                         </div>
 
                         <p className="text-gray-700 mb-6">
-                            {product.description}
+                            {product.description[langCode]}
                         </p>
 
                         {/* Color Selection */}
@@ -62,7 +68,7 @@ const ProductDetail = ({ products }) => {
 
                         <Link to={'/contact'}>
                             <button className="bg-teal-500 text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-teal-600 transition duration-300">
-                                More Info
+                                {translate('contact_us_for_more_info')}
                             </button>
                         </Link>
                     </div>

@@ -10,13 +10,13 @@ const HeaderTop = () => {
                 {/* Email and Location Section */}
                 <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
                     <li>
-                        <a href="mailto:info@homeverse.com" className="flex items-center space-x-2">
+                        <a href="mailto:info@homeverse.com" className="flex items-center space-x-2 hover:text-teal-400">
                             <FiMail className="text-lg" />
                             <span>info@mondial-sampling.com</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" className="flex items-center space-x-2">
+                        <a href="#" className="flex items-center space-x-2 hover:text-teal-400">
                             <GoLocation className="text-sm" />
                             <address className="not-italic">Hambourg, Germany</address>
                         </a>
@@ -30,7 +30,7 @@ const HeaderTop = () => {
                             <FaLinkedin className="text-lg" />
                         </a>
                     </li>
-                    <li>
+                    {/* <li>
                         <a href="#" className="hover:text-teal-400">
                             <FaTwitter className="text-lg" />
                         </a>
@@ -39,7 +39,7 @@ const HeaderTop = () => {
                         <a href="#" className="hover:text-teal-400">
                             <FaPinterestP className="text-lg" />
                         </a>
-                    </li>
+                    </li> */}
                 </ul>
 
                 {/* Phone Number Section */}

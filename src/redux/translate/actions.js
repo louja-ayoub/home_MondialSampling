@@ -15,7 +15,7 @@ export const translateAction = {
           type: actionTypes.REQUEST_LOADING,
         });
 
-        let data = translation.en_us;
+        let data = translation[value];
         if (data) {
           const LANG_STATE = {
             result: data,

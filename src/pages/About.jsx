@@ -1,7 +1,10 @@
 import React from 'react';
 import oil_indus_img from '../img/oil_indus.jpg'; // Ensure the image path is correct
+import useLanguage from '../locale/useLanguage';
 
 function About() {
+    const translate = useLanguage();
+
     return (
         <section
             className="relative bg-cover bg-center bg-no-repeat py-16"
@@ -13,13 +16,9 @@ function About() {
 
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-4xl mx-auto text-left text-white">
-                    <h2 className="text-4xl font-extrabold mb-6">About our company</h2>
+                    <h2 className="text-4xl font-extrabold mb-6"> {translate('about_our_company')} </h2>
                     <p className="text-lg mb-16">
-                        Since the beginning of 2000, we have specialised in the engineering and export of technical goods of all kinds.
-                        Our customers include leading manufacturers in the cement and heavy industry sector, mainly in French-speaking countries.
-                        In our company there are highly motivated employees, our representatives are always striving to satisfy our customers through quality and innovation.
-                        Our product range extends from technical advice and spare parts supply of any kind to the delivery of complete machines and systems.
-                        We see our customers as partners who help us to provide better service with suggestions and improvements.
+                        {translate('company_description')}
                     </p>
                 </div>
             </div>

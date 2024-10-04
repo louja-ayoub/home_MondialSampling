@@ -11,7 +11,7 @@ import SamplingPage from './SamplingPage';
 import About from './About';
 import Contact from './Contact'
 import PrivacyPolicy from './PrivacyPolicy'
-
+import PageNotFound from './PageNotFound'
 
 export default function Home() {
 
@@ -28,6 +28,7 @@ export default function Home() {
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/privacyPolicy" element={< PrivacyPolicy />} />
                         <Route path="/productDetail/:id" element={<ProductDetail products={products} />} />
+                        <Route path="/*" element={<PageNotFound />} />
                     </Routes>
                 </Suspense>
             </main>

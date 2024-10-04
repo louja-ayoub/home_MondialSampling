@@ -1,0 +1,52 @@
+const lang = {
+    home: 'Inicio',
+    sampling: 'Sampling',
+    about: 'Acerca de',
+    products: 'Productos',
+    contact_us: 'Contáctenos',
+    contact_us_for_more_info: 'Contáctenos para más información',
+    privacy_policies: 'Política de privacidad',
+    copyright: 'Mondial Sampling. Todos los derechos reservados',
+    about_our_company: 'Acerca de nuestra empresa',
+    company_description: `Desde principios de los años 2000, nos hemos especializado en la ingeniería y exportación de bienes técnicos de todo tipo. Nuestros clientes incluyen fabricantes líderes en los sectores de cemento e industria pesada, principalmente en países de habla hispana.
+    En nuestra empresa, hay empleados altamente motivados y nuestros representantes siempre se esfuerzan por satisfacer a nuestros clientes a través de la calidad y la innovación.`,
+    explore_our_catalog: 'Explora nuestro catálogo',
+    find_your_perfect_product_in_our_collection: 'Encuentra el producto perfecto en nuestra colección.',
+    trending_products: 'Productos populares',
+    more_detail: 'Más detalles',
+    more_info: 'Más información',
+    benefits_of_mondial_sampling_systems: 'Beneficios de los sistemas Mondial Sampling',
+    benefits_of_mondial_sampling_systems_list: [
+        "Fiabilidad mecánica.",
+        "Calcule la cantidad o valor correcto para cada lote de material que reciba o entregue.",
+        "Confirme que recibe o vende productos que cumplen con los requisitos contractuales.",
+        "Supervise y optimice su proceso de producción y control de calidad.",
+        "Mejore sus operaciones de mezcla para obtener mejores productos finales.",
+        "Estime el tipo y la cantidad de subproductos de sus lotes procesados o fabricados.",
+        "Al comprar la solución correcta, es probable que ahorre mucho dinero."
+    ],
+    need_assistance_contact_us: '¿Necesita ayuda? ¿Tiene una pregunta? Contáctenos para más información',
+    full_name: 'Nombre completo',
+    phone_number: 'Número de teléfono',
+    organization: 'Organización',
+    email_address: 'Dirección de correo electrónico',
+    message: 'Mensaje',
+    send_message: 'Enviar mensaje',
+    select_language: 'Seleccionar idioma',
+    english: 'Inglés',
+    spanish: 'Español',
+    french: 'Francés',
+    German: 'Alemán',
+    reviews: 'Reseñas',
+    categories: 'Categorías',
+    contact: 'Contacto',
+    our_location: 'Nuestra ubicación',
+    data_consent: 'Usted acepta que sus datos se utilizarán para procesar su solicitud.',
+    equipment_description: `Desde piezas individuales de equipos hasta sistemas llave en mano, proporcionamos sistemas de muestreo para ser incorporados en plantas que manejan sólidos particulados o lodos. Además, en Mondial Sampling nos tomamos el tiempo para comprender su proceso y ofrecer la mejor solución posible basada en normas de muestreo y mejores prácticas impulsadas por la experiencia relacionadas con la manipulación de materiales.`,
+    importance_of_samples: 'La importancia de recolectar muestras correctas y representativas que contengan la mezcla óptima de muestreo adecuada para las necesidades de su sitio y aplicación.',
+    sampling_mining_aggregates: 'Muestreo en la industria de la minería y los agregados',
+    mining_industry_description: `Proporcionamos soluciones específicas para la industria adaptadas a los desafíos que enfrenta la industria de la minería y los agregados, garantizando un muestreo representativo que cumpla con las demandas de su operación. Nuestros sistemas de muestreo están diseñados para cumplir con los requisitos más exigentes de precisión y consistencia.`
+
+}
+
+export default lang;

@@ -1,8 +1,8 @@
 const routes = [
-    { name: 'HOME', link: '/' },
-    { name: 'SAMPLING', link: '/sampling' },
-    { name: 'ABOUT', link: '/about' },
-    { name: 'PRODUCTS', link: '/products' },
+    { name: 'home', link: '/' },
+    { name: 'sampling', link: '/sampling' },
+    { name: 'about', link: '/about' },
+    { name: 'products', link: '/products' },
     // { name: 'PROJECTS', link: '/projects' },
 ];
 

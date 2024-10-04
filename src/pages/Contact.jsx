@@ -8,6 +8,7 @@ import { AiOutlineLoading3Quarters } from 'react-icons/ai'; // Spinner icon
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css'; // Import Leaflet CSS
 import L from 'leaflet';
+import useLanguage from '../locale/useLanguage';
 
 // Fix for marker icons (Leaflet's icons are not bundled automatically in React)
 delete L.Icon.Default.prototype._getIconUrl;
@@ -21,6 +22,9 @@ L.Icon.Default.mergeOptions({
 Modal.setAppElement('#root');
 
 const Contact = () => {
+
+    const translate = useLanguage();
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -140,7 +144,7 @@ const Contact = () => {
                 <div className="max-w-screen-xl px-4 py-16 mx-auto sm:flex sm:items-center sm:justify-between">
                     {/* This animated div now contains the map instead of the image */}
                     <animated.div style={imageAnimation} className="sm:flex-1">
-                        <h1 className="text-6xl">Our Location</h1>
+                        <h1 className="text-3xl dark:text-gray-100 my-8">{translate('our_location')}</h1>
                         <div style={{ height: '400px', width: '100%' }}>
                             <MapContainer center={position} zoom={13} style={{ height: '100%', width: '100%' }}>
                                 <TileLayer
@@ -158,14 +162,14 @@ const Contact = () => {
                     <animated.div style={formAnimation} className="max-w-xl mx-auto mt-8 mb-0 space-y-4 sm:ml-8 sm:mt-0 sm:flex-1">
                         <div className="text-center">
                             <h2 className="text-3xl font-bold text-gray-800 dark:text-white sm:text-4xl">
-                                Need assistance? Have a question? Contact us for more information
+                                {translate('need_assistance_contact_us')}
                             </h2>
                         </div>
 
                         <form onSubmit={handleSubmit} className="space-y-4">
                             <div>
                                 <label htmlFor="name" className="text-sm font-medium text-gray-700 dark:text-gray-200">
-                                    Full Name
+                                    {translate('full_name')}
                                 </label>
                                 <input
                                     type="text"
@@ -179,7 +183,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <label htmlFor="phone" className="text-sm font-medium text-gray-700 dark:text-gray-200">
-                                    Phone Number
+                                    {translate('phone_number')}
                                 </label>
                                 <input
                                     type="text"
@@ -194,7 +198,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <label htmlFor="company" className="text-sm font-medium text-gray-700 dark:text-gray-200">
-                                    Organization
+                                    {translate('organization')}
                                 </label>
                                 <input
                                     type="text"
@@ -208,7 +212,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <label htmlFor="email" className="text-sm font-medium text-gray-700 dark:text-gray-200">
-                                    Email Address
+                                    {translate('email_address')}
                                 </label>
                                 <input
                                     type="email"
@@ -222,14 +226,14 @@ const Contact = () => {
                             </div>
                             <div>
                                 <label htmlFor="message" className="text-sm font-medium text-gray-700 dark:text-gray-200">
-                                    Message
+                                    {translate('message')}
                                 </label>
                                 <textarea
                                     id="message"
                                     name="message"
                                     value={formData.message}
                                     onChange={handleChange}
-                                    rows="4"
+                                    rows="8"
                                     className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 shadow-sm focus:border-sky-500 focus:outline-none"
                                     required
                                 ></textarea>
@@ -243,7 +247,7 @@ const Contact = () => {
                                         onChange={handleChange}
                                         className="form-checkbox"
                                     />
-                                    <span className="ml-2">Vous acceptez que vos données soient utilisées pour traiter votre demande.</span>
+                                    <span className="ml-2 dark:text-gray-100"> {translate('data_consent')} </span>
                                 </label>
                             </div>
 
@@ -257,7 +261,7 @@ const Contact = () => {
                                         <AiOutlineLoading3Quarters className="animate-spin mr-2" /> Sending...
                                     </>
                                 ) : (
-                                    'Send Message'
+                                    translate('send_message')
                                 )}
                             </button>
                         </form>
